@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 718202726960352654}
   - component: {fileID: 718202726960352655}
   - component: {fileID: 718202728160734559}
+  - component: {fileID: 467942105}
   m_Layer: 0
   m_Name: Tank
   m_TagString: Untagged
@@ -735,6 +736,25 @@ MonoBehaviour:
   m_EngineIdlying: {fileID: 8300000, guid: 2c608a1902e32ba44a1e4cf245b104ee, type: 3}
   m_EngineDriving: {fileID: 8300000, guid: 494cb7fed386a004e9dd351bd6586b76, type: 3}
   m_PitchRange: 0.2
+--- !u!114 &467942105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718202726960352656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a361b69bfa880d4483233408c07b965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHealth: 100
+  m_Slider: {fileID: 248746820}
+  m_FillImage: {fileID: 485181089}
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  m_ExplotionPrefab: {fileID: 7684388427174706148, guid: 6de8256a6d46d904eab6a47b8dbd03e2,
+    type: 3}
 --- !u!1001 &718202726445043738
 PrefabInstance:
   m_ObjectHideFlags: 0
