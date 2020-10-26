@@ -286,6 +286,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &149128432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 248746820, guid: 9fe725aa34642a34eac49196c367fd9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 718202728160734557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &297027880
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DampTime: 0.2
   m_ScreenEdgeBuffer: 4
-  m_MinSize: 7
+  m_MinSize: 8
   m_Targets:
   - {fileID: 1555632280}
 --- !u!4 &332107627
@@ -536,6 +548,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &417315871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 485181089, guid: 9fe725aa34642a34eac49196c367fd9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 718202728160734557}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &418770979
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +641,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &467942098 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 718202726960352656, guid: 9fe725aa34642a34eac49196c367fd9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 718202728160734557}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &467942105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467942098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a361b69bfa880d4483233408c07b965, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHealth: 100
+  m_Slider: {fileID: 149128432}
+  m_FillImage: {fileID: 417315871}
+  m_FullHealthColor: {r: 0, g: 1, b: 0, a: 1}
+  m_ZeroHealthColor: {r: 1, g: 0, b: 0, a: 1}
+  m_ExplotionPrefab: {fileID: 7684388427174706148, guid: 6de8256a6d46d904eab6a47b8dbd03e2,
+    type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1895,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 248746821, guid: 9fe725aa34642a34eac49196c367fd9a, type: 3}
+      propertyPath: m_UseRelativeLocation
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 485181088, guid: 9fe725aa34642a34eac49196c367fd9a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
