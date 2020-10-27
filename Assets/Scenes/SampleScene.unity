@@ -1849,7 +1849,7 @@ PrefabInstance:
     - target: {fileID: 1578744820, guid: ec90ef679f1c9844cb024d2bf0567a97, type: 3}
       propertyPath: m_ExplotionAudio
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 629218890494376281}
     - target: {fileID: 629218889791193769, guid: ec90ef679f1c9844cb024d2bf0567a97,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1910,8 +1910,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shell
       objectReference: {fileID: 0}
+    - target: {fileID: 6214822572443768505, guid: ec90ef679f1c9844cb024d2bf0567a97,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec90ef679f1c9844cb024d2bf0567a97, type: 3}
+--- !u!82 &629218890494376281 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6214822572443768505, guid: ec90ef679f1c9844cb024d2bf0567a97,
+    type: 3}
+  m_PrefabInstance: {fileID: 629218890494376280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &718202728160734557
 PrefabInstance:
   m_ObjectHideFlags: 0
