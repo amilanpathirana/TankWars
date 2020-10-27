@@ -28,7 +28,7 @@ public class GameManager:MonoBehaviour
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
 
-
+        StartCoroutine(RoundStartingText());
         SpawnAllTanks();
         SetCameraTargets();
         StartCoroutine(GameLoop());
@@ -59,7 +59,7 @@ public class GameManager:MonoBehaviour
 
     private IEnumerator GameLoop()
     {
-        yield return StartCoroutine(RoundStartingText());
+        //yield return StartCoroutine(RoundStartingText());
         yield return StartCoroutine(RoundStarting());
         yield return StartCoroutine(RoundPlaying());
         yield return StartCoroutine(RoundEnding());
