@@ -9,7 +9,7 @@ public class TankShooting : MonoBehaviour
     public int m_TankNumber = 1;
     public Rigidbody2D m_Shell;
     public Transform m_FireTrransform;
-    //public Slider m_AimSlider;
+    public Slider m_AimSlider;
     public AudioSource m_ShootingAudio;
     public AudioClip m_ChargingClip;
     public AudioClip m_FireClip;
@@ -31,7 +31,7 @@ public class TankShooting : MonoBehaviour
     {
         ///Fire();
         m_CrrentLanchForce = m_MinLaunchForce;
-        //m_AimSlider.value = m_MinLaunchForce;
+        m_AimSlider.value = m_MinLaunchForce;
     }
 
     // Update is called once per frame
@@ -48,7 +48,7 @@ public class TankShooting : MonoBehaviour
 
     {
 
-        //m_AimSlider.value = m_MinLaunchForce;
+        m_AimSlider.value = m_MinLaunchForce;
 
         if(m_CrrentLanchForce>= m_MaxLaunchForce && !m_Fired)
         {
@@ -67,7 +67,7 @@ public class TankShooting : MonoBehaviour
         else if (Input.GetButton(m_FireButton) && !m_Fired)
         {
             m_CrrentLanchForce += m_ChargeSpeed * Time.deltaTime;
-           // m_AimSlider.value = m_CrrentLanchForce;
+           m_AimSlider.value = m_CrrentLanchForce;
         }
         else if(Input.GetButtonUp(m_FireButton)&& !m_Fired)
         {

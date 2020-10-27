@@ -201,11 +201,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   m_ExplosionParticles: {fileID: 3254024087814124693}
-  m_ExplotionAudio: {fileID: 0}
+  m_ExplotionAudio: {fileID: 6214822572443768505}
   m_MaxDamage: 50
   m_ExplotionForce: 1000
-  m_MaxLifeTime: 200
-  m_ExplotionRadius: 5
+  m_MaxLifeTime: 2
+  m_ExplotionRadius: 3
 --- !u!82 &6214822572443768505
 AudioSource:
   m_ObjectHideFlags: 0
