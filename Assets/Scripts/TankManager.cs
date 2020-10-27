@@ -27,8 +27,8 @@ public class TankManager
         m_Movement.m_TankNumber = m_TankrNumber;
         m_Shooting.m_TankNumber = m_TankrNumber;
         m_ColoredPlayerText = "<color=#" + ColorUtility.ToHtmlStringRGB(m_TankColor) + ">TANK" + m_TankrNumber + "</color>";
-        //SpriteRenderer renderers = m_Instance.GetComponent<SpriteRenderer>();
-        //renderers.color = m_TankColor;
+        SpriteRenderer renderers = m_Instance.GetComponent<SpriteRenderer>();
+        renderers.color = m_TankColor;
     }
 
         public void DisableControl()
