@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class ShellExplotion : MonoBehaviour
@@ -16,7 +17,11 @@ public class ShellExplotion : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, m_MaxLifeTime);  
+
+        Destroy(gameObject, m_MaxLifeTime);
+
+
+
     }
 
    
@@ -75,6 +80,19 @@ public class ShellExplotion : MonoBehaviour
 
 
 
+ 
 
 
+
+    private void OnDestroy()
+    {
+        m_ExplosionParticles.transform.parent = null;
+        m_ExplosionParticles.Play();
+
+        m_ExplotionAudio.Play();
+        Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
+
+        // Destroy(m_ExplosionParticles.gameObject, m_ExplosionParticles.main.duration);
+    }
 }
+
