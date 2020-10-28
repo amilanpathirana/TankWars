@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class GameManager:MonoBehaviour
 {
     public int m_NumRoundsToWin = 5;
-    public float m_StartDelay = 5f;
+    public float m_StartDelay = 2f;
     public float m_EndDelay = 3f;
     public CameraControl m_CameraControl;
     public Text m_MessageText;
@@ -28,7 +28,7 @@ public class GameManager:MonoBehaviour
         m_EndWait = new WaitForSeconds(m_EndDelay);
 
 
-        StartCoroutine(RoundStartingText());
+        //StartCoroutine(RoundStartingText());
         SpawnAllTanks();
         SetCameraTargets();
         StartCoroutine(GameLoop());
@@ -59,7 +59,7 @@ public class GameManager:MonoBehaviour
 
     private IEnumerator GameLoop()
     {
-        //yield return StartCoroutine(RoundStartingText());
+        yield return StartCoroutine(RoundStartingText());
         yield return StartCoroutine(RoundStarting());
         yield return StartCoroutine(RoundPlaying());
         yield return StartCoroutine(RoundEnding());
@@ -82,7 +82,7 @@ public class GameManager:MonoBehaviour
      
         m_MessageText.text = "Tank Wars ";
 
-        yield return m_StartDelay;
+        yield return m_StartWait;
     }
 
 
@@ -94,7 +94,7 @@ public class GameManager:MonoBehaviour
             m_RoundNumber++;
             m_MessageText.text = "ROUND " + m_RoundNumber;
 
-            yield return m_StartDelay;
+            yield return m_StartWait;
         }
 
     private IEnumerator RoundPlaying()
