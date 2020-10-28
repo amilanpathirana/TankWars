@@ -6,6 +6,11 @@ using UnityEngine.UI;
 public class TankShooting : MonoBehaviour
 {
 
+
+    public float m_StartDelay = 0.4f;
+
+    private WaitForSeconds WaitABit;
+
     public int m_TankNumber = 1;
     public Rigidbody2D m_Shell;
     public Transform m_FireTrransform;
@@ -22,6 +27,7 @@ public class TankShooting : MonoBehaviour
     private float m_CrrentLanchForce;
     private float m_ChargeSpeed;
     private bool m_Fired;
+    private bool m_CanFire=true;
 
 
 
@@ -38,7 +44,7 @@ public class TankShooting : MonoBehaviour
     void Start()
     {
 
-
+        WaitABit = new WaitForSeconds(m_StartDelay);
 
         m_FireButton = "Fire" + m_TankNumber;
         m_ChargeSpeed = (m_MaxLaunchForce - m_MinLaunchForce) / m_MaxChargeTime;
@@ -48,37 +54,47 @@ public class TankShooting : MonoBehaviour
 
     {
 
-        m_AimSlider.value = m_MinLaunchForce;
-
-        if(m_CrrentLanchForce>= m_MaxLaunchForce && !m_Fired)
+        if (m_CanFire)
         {
-            m_CrrentLanchForce = m_MaxLaunchForce;
-            Fire();
+
+            m_AimSlider.value = m_MinLaunchForce;
+
+            if (m_CrrentLanchForce >= m_MaxLaunchForce && !m_Fired)
+            {
+                m_CrrentLanchForce = m_MaxLaunchForce;
+                Fire();
+
+            }
+            else if (Input.GetButtonDown(m_FireButton) && m_Fired)
+            {
+                m_Fired = false;
+                m_CrrentLanchForce = m_MinLaunchForce;
+                m_ShootingAudio.clip = m_ChargingClip;
+                m_ShootingAudio.Play();
+
+            }
+            else if (Input.GetButton(m_FireButton) && !m_Fired)
+            {
+                m_CrrentLanchForce += m_ChargeSpeed * Time.deltaTime;
+                m_AimSlider.value = m_CrrentLanchForce;
+            }
+            else if (Input.GetButtonUp(m_FireButton) && !m_Fired)
+            {
+                Fire();
+            }
+
 
         }
-        else if (Input.GetButtonDown(m_FireButton) && m_Fired)
-        {
-            m_Fired = false;
-            m_CrrentLanchForce = m_MinLaunchForce;
-            m_ShootingAudio.clip = m_ChargingClip;
-            m_ShootingAudio.Play();
-
-        }
-        else if (Input.GetButton(m_FireButton) && !m_Fired)
-        {
-            m_CrrentLanchForce += m_ChargeSpeed * Time.deltaTime;
-           m_AimSlider.value = m_CrrentLanchForce;
-        }
-        else if(Input.GetButtonUp(m_FireButton)&& !m_Fired)
-        {
-            Fire();
-        }
-
-        
 
 
     }
 
+
+    private IEnumerator Delay()
+    {
+        yield return WaitABit;
+        m_CanFire = true;
+    }
 
     private void Fire()
     {
@@ -88,7 +104,9 @@ public class TankShooting : MonoBehaviour
         m_ShootingAudio.clip = m_FireClip;
         m_ShootingAudio.Play();
         m_CrrentLanchForce = m_MinLaunchForce;
-        //StartCoroutine(waiter_not_that_waiter_just_waiter());
+        m_CanFire = false;
+
+        StartCoroutine(Delay());
     }
 
     /*IEnumerator waiter_not_that_waiter_just_waiter()
