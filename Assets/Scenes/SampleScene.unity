@@ -570,7 +570,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333827894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.52, y: -0.31, z: 0}
+  m_LocalPosition: {x: 5.86, y: 4.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ac0b493aa0219449de529a0420bf99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_NumRoundsToWin: 2
+  m_NumRoundsToWin: 3
   m_StartDelay: 5
   m_EndDelay: 5
   m_CameraControl: {fileID: 332107626}
@@ -2563,13 +2563,13 @@ MonoBehaviour:
     type: 3}
   m_Tanks:
   - m_TankColor: {r: 0.9150943, g: 0.33236915, b: 0.33236915, a: 1}
-    m_SpawnPoint: {fileID: 1820982810}
+    m_SpawnPoint: {fileID: 333827895}
     m_TankrNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
     m_Wins: 0
   - m_TankColor: {r: 0.3033108, g: 0.3399403, b: 0.9056604, a: 1}
-    m_SpawnPoint: {fileID: 333827895}
+    m_SpawnPoint: {fileID: 1820982810}
     m_TankrNumber: 0
     m_ColoredPlayerText: 
     m_Instance: {fileID: 0}
@@ -3188,7 +3188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820982809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.59, y: 1.48, z: 0}
+  m_LocalPosition: {x: -9.46, y: -1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

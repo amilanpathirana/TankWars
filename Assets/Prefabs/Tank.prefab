@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db4a4213f53f2e34e86b2c344fc08792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_StartDelay: 0.2
   m_TankNumber: 1
   m_Shell: {fileID: 629218889791193782, guid: ec90ef679f1c9844cb024d2bf0567a97, type: 3}
   m_FireTrransform: {fileID: 1589278161}
@@ -1007,9 +1008,9 @@ MonoBehaviour:
   m_ShootingAudio: {fileID: 718202726960352655}
   m_ChargingClip: {fileID: 8300000, guid: 70e46f68091bc8d40850dea0a29fcd0b, type: 3}
   m_FireClip: {fileID: 8300000, guid: ff2d572763e26104089479b47f9ca964, type: 3}
-  m_MinLaunchForce: 15
-  m_MaxLaunchForce: 30
-  m_MaxChargeTime: 0.75
+  m_MinLaunchForce: 10
+  m_MaxLaunchForce: 50
+  m_MaxChargeTime: 0.5
 --- !u!1001 &718202726445043738
 PrefabInstance:
   m_ObjectHideFlags: 0
