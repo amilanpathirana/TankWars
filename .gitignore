@@ -9,7 +9,7 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-/[Pp]hoton/
+/Assets/Photon/
 
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
